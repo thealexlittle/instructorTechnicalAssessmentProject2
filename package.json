@@ -5,7 +5,7 @@
 	"devDependencies": {
 		"ava": "^1.0.1"
 	},
-	"ava":{
+	"ava": {
 		"failFast": false,
 		"verbose": false
 	}
