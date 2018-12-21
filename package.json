@@ -1,0 +1,12 @@
+{
+	"scripts": {
+		"test": "ava \"**/*[s]pec.js\""
+	},
+	"devDependencies": {
+		"ava": "^1.0.1"
+	},
+	"ava":{
+		"failFast": false,
+		"verbose": false
+	}
+}
