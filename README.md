@@ -38,7 +38,7 @@ Your submitted code will be run through the testing spec AS IS. Therefore, you a
     charmander.takeDamage(2000);
     console.log(charmander.health);  // 0
    ```
-4. `Pokemon` objects should have an `attack()` method, which takes a `Pokemon` object as an argument (the opponent being attacked). This method should call the `takeDamage()` method belonging to the opposing `Pokemon` and provide the appropriate damage as an argument. Damage is calculated simply: `DAMAGE = CURRENT_POKEMON_ATTACK - OPPONENT_POKEMON_DEFENSE`.
+4. `Pokemon` objects should have an `attackOpponent()` method, which takes a `Pokemon` object as an argument (the opponent being attacked). This method should call the `takeDamage()` method belonging to the opposing `Pokemon` and provide the appropriate damage as an argument. Damage is calculated simply: `DAMAGE = CURRENT_POKEMON_ATTACK - OPPONENT_POKEMON_DEFENSE`.
    - For example:
    ```javascript
     const charmander = new Pokemon("charmander", 12, 8, 30, "fire");
@@ -49,7 +49,7 @@ Your submitted code will be run through the testing spec AS IS. Therefore, you a
     // 12 attack - 9 defense = 3 damage
 
     console.log(bulbasaur.health);  // 35
-    charmander.attack(bulbasaur);   // charmander attacks bulbasaur
+    charmander.attackOpponent(bulbasaur);   // charmander attacks bulbasaur
     console.log(bulbasaur.health);  // 32
    ```
    - By default, attacking a `Pokemon` should do __at the very least__ 1 damage. Consider what might happen if the `Pokemon` being attacked has a higher `.defense` than the `.attack` of the attacking `Pokemon`.

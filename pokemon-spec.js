@@ -1,4 +1,5 @@
 import test from "ava"
+import sinon from "sinon"
 import Pokemon from "./pokemon"
 
 function randNum(num){
@@ -16,9 +17,9 @@ function randStr(){
 function randPokemonData(){
     return [
         randStr(),
-        randNum(),
-        randNum(),
-        randNum(),
+        randNum()+1,
+        randNum()+1,
+        randNum()+1,
         randStr()
     ];
 }
@@ -76,12 +77,36 @@ test("takeDamage()",t=>{
     }
 })
 
-// #4 `attack()` method, which takes a `Pokemon` object as an argument (the opponent being attacked). This method should call the `takeDamage()` method on the opponent `Pokemon`
-test("attack()",t=>{
+// #4 `attackOpponent()` method, which takes a `Pokemon` object as an argument (the opponent being attacked). This method should call the `takeDamage()` method on the opponent `Pokemon`
+test("attackOpponent()",t=>{
     // Example tests
     const charmander = new Pokemon("charmander", 12, 8, 30, "fire");
     const bulbasaur = new Pokemon("bulbasaur", 7, 9, 35, "grass/poison");
-    t.pass();
+    
+    charmander.attackOpponent(bulbasaur);
+    t.is(bulbasaur.health, 32);
+    // Random tests
+    const count = 100;
+    for(let i = 0; i < count; i++){
+        const pokemon1Data = randPokemonData();
+        const pokemon1 = new Pokemon(...pokemon1Data);
+        
+        const pokemon2Data = randPokemonData();
+        const pokemon2 = new Pokemon(...pokemon2Data);
+
+        const pokemon2Health  = pokemon2Data[3];
+        const pokemon2Defense = pokemon2Data[2];
+        const pokemon1Attack  = pokemon1Data[1];
+        const diff = pokemon1Attack - pokemon2Defense;
+        const damage = diff < 1 ? 1 : diff;
+        pokemon1.attackOpponent(pokemon2);
+        t.is(pokemon2.health, damage > pokemon2Health ? 0 : pokemon2Health - damage);
+
+        // opponent's `.takeDamage()` is called
+        pokemon2.takeDamage = sinon.spy();
+        pokemon1.attackOpponent(pokemon2);
+        t.true(pokemon2.takeDamage.called);
+    }
 });
 
 // #5 `display()` method, which takes no arguments and returns a string in the format "POKEMON_NAME (POKEMON_TYPE) CURRENT_POKEMON_HEALTH/ORIGINAL_POKEMON_HEALTH"
