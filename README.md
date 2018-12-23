@@ -1,13 +1,6 @@
 # Project #2 - Define a JavaScript Class
 **Define the `Pokemon` class using the given specifications**
 
-The testing spec that will be used to score your code is provided **within this repo**.  
-
-A simplified testing spec has also been provided - just copy and paste the code after your class is defined and run it in a JavaScript environment.  
-__Make sure to remove any testing related code before you submit!__  
-
-Your submitted code will be run through the testing spec AS IS. Therefore, you are HIGHLY encouraged to make sure your code works before submitting it.
-
 # `Pokemon` class specifications
 1. The `Pokemon` class should be defined.
 2. A `Pokemon` object should be initialized, or constructed, by passing in 5 arguments, which should correspond to the following 5 properties in order: `.name`, `.attack`, `.defense`, `.health`, and `.type`. 
@@ -62,6 +55,17 @@ Your submitted code will be run through the testing spec AS IS. Therefore, you a
     pikachu.health = 12;
     pikachu.display(); // "PIKACHU (ELECTRIC) 12/25"
    ```
+
+The testing spec that will be used to score your code is provided **within this repo**. 
+   - The "test.pokemon.js" and "testRunner.html" files work together for browser-based testing (using Mocha.js)
+   - Create a "pokemon.js" file, which should contain your code to define the `Pokemon` class
+   - Open the "testRunner.html" file in any browser - you should see your test results
+
+A simplified testing spec has also been provided ("simplified-pokemon-spec.js") - just copy and paste the code after your `Pokemon` class definition and run it in a JavaScript environment.  
+
+Your submitted code will be run through the testing spec AS IS. Therefore, you are HIGHLY encouraged to make sure your code works before submitting it.
+---
+__Make sure to remove any testing related code before you submit!__  
 
 ---
 # Rubric
