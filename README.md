@@ -56,12 +56,12 @@
     pikachu.display(); // "PIKACHU (ELECTRIC) 12/25"
    ```
 
-The testing spec that will be used to score your code is provided **within this repo**. 
-   - The "test.pokemon.js" and "testRunner.html" files work together for browser-based testing (using Mocha.js)
+The testing spec that will be used to score your code is provided within this repo. 
+   - The ("test.pokemon.js")[https://github.com/AllStarCodeOrg/instructorTechnicalAssessmentProject2/blob/master/test.pokemon.js] and "testRunner.html" files work together for browser-based testing (using Mocha.js)
    - Create a "pokemon.js" file, which should contain your code to define the `Pokemon` class
    - Open the "testRunner.html" file in any browser - you should see your test results
 
-A simplified testing spec has also been provided ("simplified-pokemon-spec.js") - just copy and paste the code after your `Pokemon` class definition and run it in a JavaScript environment.  
+A simplified testing spec has also been provided (["simplified-pokemon-spec.js"](https://github.com/AllStarCodeOrg/instructorTechnicalAssessmentProject2/blob/master/simplified-pokemon-spec.js)) - just copy and paste the code after your `Pokemon` class definition and run it in a JavaScript environment.  
 
 Your submitted code will be run through the testing spec AS IS. Therefore, you are HIGHLY encouraged to make sure your code works before submitting it.
 ---
