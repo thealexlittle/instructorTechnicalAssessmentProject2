@@ -1,5 +1,5 @@
 # Project #2 - Define a JavaScript Class
-**Define the `Pokemon` class using the given specifications**
+**Define the `Pokemon` class using the given specifications in JavaScript(ES6)**
 
 # `Pokemon` class specifications
 1. The `Pokemon` class should be defined.
