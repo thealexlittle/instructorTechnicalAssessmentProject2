@@ -77,4 +77,11 @@ Compounded errors are taken into consideration. For example, if a method fails t
 Passing all tests for a perfect score is NOT required to continue in the interview process.  
 ### CODE SYNTAX & STYLE
 ES6 JavaScript should be used when applicable - specifically, in defining the class along with its properties and methods; and variables are defined using `const` or `let`.  
-Additionally, although optimum code efficiency is not required, novice programming quirks may count against CODE STYLE. Some common quirks include: using a condition with a boolean instead of the boolean itself (for example: ```if(x===true){...}``` instead of ```if(x){...}```), not indenting code blocks, and forgetting to return a value in a function or method.
+
+Additionally, although optimum code efficiency is not required, novice programming quirks may count against code style.  
+
+Some common quirks include: 
+- Making a condition statement with a boolean instead of using the boolean itself
+     - For example: ```if(x===true){...}``` instead of ```if(x){...}```
+- Not indenting code blocks 
+- Forgetting to return a value in a function or method
