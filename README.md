@@ -57,7 +57,7 @@
    ```
 
 The testing spec that will be used to score your code is provided within this repo. 
-   - The ("test.pokemon.js")[https://github.com/AllStarCodeOrg/instructorTechnicalAssessmentProject2/blob/master/test.pokemon.js] and "testRunner.html" files work together for browser-based testing (using Mocha.js)
+   - The ["test.pokemon.js"](https://github.com/AllStarCodeOrg/instructorTechnicalAssessmentProject2/blob/master/test.pokemon.js) and "testRunner.html" files work together for browser-based testing (using Mocha.js)
    - Create a "pokemon.js" file, which should contain your code to define the `Pokemon` class
    - Open the "testRunner.html" file in any browser - you should see your test results
 
